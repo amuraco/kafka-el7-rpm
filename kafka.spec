@@ -86,7 +86,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_unitdir}/%{name}.service
 %config(noreplace) %{_sysconfdir}/logrotate.d/%{name}
 %config(noreplace) %{_sysconfdir}/sysconfig/%{name}
-%attr(0755,kafka,kafka) %{_prefix}/%{name}
+%config(noreplace) %attr(0755,kafka,kafka) %{_prefix}/%{name}
 %attr(0755,kafka,kafka) %dir %{_log_dir}
 %attr(0700,kafka,kafka) %dir %{_data_dir}
 %doc NOTICE
